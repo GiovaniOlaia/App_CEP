@@ -52,9 +52,9 @@ namespace App_CEP.Service
             return arr_bairros;
         }
 
-        public static async Task<List<Estado>> GetCidadesByEstado(string estado_selecionado)
+        public static async Task<List<Cidade>> GetCidadesByEstado(string estado_selecionado)
         {
-            List<Estado> arr_cidades = new List<Estado>();
+            List<Cidade> arr_cidades = new List<Cidade>();
 
             using (HttpClient client = new HttpClient())
             {
@@ -64,7 +64,7 @@ namespace App_CEP.Service
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_cidades = JsonConvert.DeserializeObject<List<Estado>>(json);
+                    arr_cidades = JsonConvert.DeserializeObject<List<Cidade>>(json);
                 }
                 else
                     throw new Exception(response.RequestMessage.Content.ToString());
