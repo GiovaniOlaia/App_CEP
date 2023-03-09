@@ -4,9 +4,9 @@
              x:Class="App_CEP.Menu">
     <ContentPage.Content>
         <Grid ColumnDefinitions="*, *"
-              RowDefinitions="*, *, *, *"
-            
-            <Label Grid.Row="0" Grid.Column="0" Text=""
+              RowDefinitions="*, *, *, *">
+
+            <Label Grid.Row="0" Grid.Column="0" Text="" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
