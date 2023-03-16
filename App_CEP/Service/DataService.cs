@@ -98,7 +98,7 @@ namespace App_CEP.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/logradouro?logradouro=" + logradouro);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
 
                 if (response.IsSuccessStatusCode)
                 {

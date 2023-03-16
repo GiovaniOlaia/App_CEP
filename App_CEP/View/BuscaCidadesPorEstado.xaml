@@ -1,20 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_CEP.View.BuscaCepPorLogradouro">
-    
+             x:Class="App_CEP.View.BuscaCidadesPorEstado">
     <ContentPage.Content>
         <StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <SearchBar x:Name="txt_logradouro"
-                             Placeholder="Qual é a rua?" />
+                <SearchBar x:Name="txt_cidade"
+                             Placeholder="Qual é o estado?" />
                 <Button Text="Buscar" Clicked="Button_Clicked" />
             </StackLayout>
 
             <ActivityIndicator x:Name="carregando" IsRunning="False" />
 
-            <ListView x:Name="lst_ceps">
+            <ListView x:Name="lst_cidades">
                 <ListView.Header>
                     <Grid ColumnDefinitions="Auto, *, *, Auto"
                           RowDefinitions="Auto">
