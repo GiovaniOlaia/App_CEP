@@ -24,7 +24,7 @@ namespace App_CEP.View
             {
                 carregando.IsRunning = true;
 
-                List<Cidade> arr_cidades = await DataService.GetCidadesByEstado(txt_Estado.Text);
+                List<Cidade> arr_cidades = await DataService.GetCidadesByEstado(txt_cidade.Text);
 
                 lst_cidades.ItemsSource = arr_cidades;
             }

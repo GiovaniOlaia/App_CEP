@@ -58,7 +58,7 @@ namespace App_CEP.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=");
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + estado_selecionado);
 
                 if (response.IsSuccessStatusCode)
                 {
